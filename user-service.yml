@@ -1,11 +1,16 @@
 server:
-  port: 5002
+  port: 5001
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/airline_db
+    url: jdbc:mysql://localhost:3306/airline_user_db
     username: root
     password: admin
+
+
+jwt:
+  secret: SJWNDHUWDHYUIENBFDBEUIHIQDKQDNKQWHUQEHQDMQNDQJFQEHFUEWFHJWEBHVUWHFWBVJKWBWVK
+  expiration: 86400000
 
 eureka:
   client:
