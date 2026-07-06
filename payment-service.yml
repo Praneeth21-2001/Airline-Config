@@ -1,23 +1,26 @@
 server:
   port: 5010
 
-
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/payment_db
+    url: jdbc:mysql://mysql:3306/payment_db
     username: root
     password: admin
 
+  jpa:
+    hibernate:
+      ddl-auto: update
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
 
 razorpay:
   api:
     key: rzp_test_SlAbn9IBKFPAif
     secret: x3rEo2w6KDMBOvN3LpkhZ5tw
+
   callback:
-    base-url: http://localhost:5173
+    base-url: http://frontend:8080
 
 eureka:
   client:
